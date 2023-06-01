@@ -10,12 +10,13 @@ module predictor(input wire request, result, clk, taken, output reg prediction);
     if (request) begin
       prediction = counter[1];
     end
-    if (reslut) begin
+    if (result) begin
       if (taken) begin
-        if (counter != 3) counter <= counter + 1
+        if (counter != 2'b11) counter = counter + 1;
       end
     else begin
-      if (counter != 0) counter <= counter - 1
+      if (counter != 2'b00) counter = counter - 1;
+      end
     end
   end 
 endmodule
