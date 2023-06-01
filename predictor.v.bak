@@ -1,8 +1,15 @@
+
+// request : signal to show update should happen ( when 1, read taken)
+// taken :  
+
 module predictor(input wire request, result, clk, taken, output reg prediction);
 
 // Your code
 
-  
+  always @(posedge request) begin
+    
+    
+  end
 
 
 endmodule
